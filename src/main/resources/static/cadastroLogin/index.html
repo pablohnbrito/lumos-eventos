@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .form-container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0d6efd;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Cadastro</h2>
+    <form id="cadastro-form">
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nome"
+          placeholder="Digite seu nome"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="Digite seu e-mail"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input
+          type="password"
+          class="form-control"
+          id="senha"
+          placeholder="Digite sua senha"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+        <input
+          type="date"
+          class="form-control"
+          id="dataNascimento"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="cidade" class="form-label">Cidade</label>
+        <input
+          type="text"
+          class="form-control"
+          id="cidade"
+          placeholder="Digite sua cidade"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <label for="estado" class="form-label">Estado</label>
+        <select id="estado" class="form-select" required>
+          <option value="" selected disabled>Selecione seu estado</option>
+          <option value="0">Acre</option>
+          <option value="1">Alagoas</option>
+          <option value="2">Amapá</option>
+          <option value="3">Amazonas</option>
+          <option value="4">Bahia</option>
+          <option value="5">Ceará</option>
+          <option value="6">Espírito Santo</option>
+          <option value="7">Goiás</option>
+          <option value="8">Maranhão</option>
+          <option value="9">Mato Grosso</option>
+          <option value="10">Mato Grosso do Sul</option>
+          <option value="11">Minas Gerais</option>
+          <option value="12">Pará</option>
+          <option value="13">Paraíba</option>
+          <option value="14">Paraná</option>
+          <option value="15">Pernambuco</option>
+          <option value="16">Piauí</option>
+          <option value="17">Rio de Janeiro</option>
+          <option value="18">Rio Grande do Norte</option>
+          <option value="19">Rio Grande do Sul</option>
+          <option value="20">Rondônia</option>
+          <option value="21">Roraima</option>
+          <option value="22">Santa Catarina</option>
+          <option value="23">São Paulo</option>
+          <option value="24">Sergipe</option>
+          <option value="25">Tocantins</option>
+          <option value="26">Distrito Federal</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Cadastrar</button>
+      <script src="javascript.js"></script>
+    </form>
+  </div>
+</body>
+</html>

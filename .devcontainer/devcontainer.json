@@ -1,0 +1,81 @@
+{
+    "name": "Spring Demo"
+
+    , "image": "mcr.microsoft.com/vscode/devcontainers/java:21-bullseye"
+
+    , "customizations": {
+        "vscode": {
+            // Extensões necessárias para todos os usuários desse projeto.
+            // Não coloque aqui as extensões de sua preferência, apenas as estritamente necessárias
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "vmware.vscode-boot-dev-pack",
+                "SonarSource.sonarlint-vscode",
+                "redhat.fabric8-analytics",
+                "GitLab.gitlab-workflow",
+                "redhat.vscode-xml",
+                "redhat.vscode-yaml"
+            ]
+
+            // Configurações necessárias para o funcionamento adequado do projeto
+            // Preferências pessoais devem ficar nas configurações de usuário
+            // Depois que o container for criado essas configurações ficarão visíveis na aba "Dev Container" das configurações
+            , "settings": {
+                  "boot-java.rewrite.reconcile": true
+                , "java.compile.nullAnalysis.mode": "automatic"
+                , "java.configuration.updateBuildConfiguration": "automatic"
+                , "remote.localPortHost": "allInterfaces"
+                , "terminal.integrated.env.linux": {
+                    "SPRING_PROFILES_ACTIVE": ""
+                }
+            }
+        }
+    }
+
+    , "features": {
+        // Instala o maven na versão especificada para evitar problemas de compatibilidade
+        // Não instala nenhuma versão do java, a imagem já possui a versão usada na própria tag
+        "ghcr.io/devcontainers/features/java": {
+              "installMaven": true
+            , "mavenVersion": "latest"
+            , "version": "none"
+        }
+
+        // Instala o nodejs, algumas ferramentas podem fazer uso, por exemplo o Sonar ao analisar js/css
+        , "ghcr.io/devcontainers/features/node": {
+            "version": "18"
+        }
+    }
+
+    // Monta a pasta local do maven no container reaproveitando o cache entre o sistema local e os containers
+    , "mounts": [
+        {
+              "source": "${localEnv:HOME}/.m2"
+            , "target": "/home/vscode/.m2"
+            , "type": "bind"
+        }
+        ,{
+              "source": "${localEnv:HOME}/.kube"
+            , "target": "/home/vscode/.kube"
+            , "type": "bind"
+        }
+    ]
+
+    , "portsAttributes": {
+        "8080-8081": {
+              "label": "Application"
+            , "onAutoForward": "openBrowserOnce"
+        }
+    }
+
+    , "postStartCommand": "mvn clean compile"
+
+    // Variáveis que precisam estar disponíveis dentro do container
+    // Também é possível repassar o valor de variáveis locais para o container,
+    // assim não é necessário ficar gerenciando os valores em mais de um lugar
+    // No caso do valor das variáveis locais serem atualizados é necessário dar rebuild no container
+    // F1 > Rebuild Container
+    , "remoteEnv": {
+          "TZ": "America/Recife"
+    }
+}

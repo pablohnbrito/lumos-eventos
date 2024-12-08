@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventos</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+          <img
+            src="imagens/logo.jpg"
+            alt="Logo"
+            class="logo d-inline-block align-text-top rounded-circle border border-light border-2"
+          />
+        </a>
+        <!-- Botão de menu para dispositivos menores -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Itens da barra -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <!-- Campo de Busca -->
+          <form class="d-flex mx-auto" role="search">
+            <div class="input-group">
+              <input
+                class="form-control"
+                type="search"
+                placeholder="Buscar"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-light" type="submit">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Botão de Login -->
+        <a href="login/login.html" class="btn btn-outline-light" id="login-button">
+          <i class="bi bi-person-circle"></i> Login
+        </a>
+
+         <!-- Botão de cadastrar evento-->
+         <a href="cadastrarEvento/cadastrarEvento.html" class="btn btn-outline-light" id="login-button">
+          <i class="bi bi-person-circle"></i> cadastrar evento
+        </a>
+
+      </div>
+    </nav>
+
+    <!-- Carrossel -->
+    <div id="eventosCarrossel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#eventosCarrossel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#eventosCarrossel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <!-- Primeira imagem -->
+        <div class="carousel-item active">
+          <img src="imagens/chicago.jpg" class="d-block w-100" alt="Evento 1" />
+        </div>
+        <!-- Segunda imagem (adicione mais imagens aqui) -->
+        <div class="carousel-item">
+          <img src="imagens/la (1).jpg" class="d-block w-100" alt="Evento 2" />
+        </div>
+      </div>
+      <!-- Controles -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#eventosCarrossel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#eventosCarrossel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+
+    <h2 class="text-center mt-5">Próximos Eventos</h2>
+    <div
+      id="carouselExampleControls"
+      class="carousel carousel-dark slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="card-group m-5">
+            <div class="card mx-auto" style="width: 18rem;">
+              <img src="imagens/imagem1.PNG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card mx-auto" style="width: 18rem;">
+              <img src="imagens/imagem2.PNG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="imagens/imagem3.PNG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="card-group m-5">
+            <div class="card mx-auto" style="width: 18rem;">
+              <img src="imagens/imagem4.PNG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card mx-auto" style="width: 18rem;">
+              <img src="imagens/imagem2.PNG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img src="imagens/imagem3.PNG" class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleControls"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!--filtrar eventos-->
+    <div class="container my-5">
+      <h3 class="text-center mb-4">Buscar Eventos</h3>
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+          <div class="input-group shadow-sm">
+            <input
+              type="text"
+              id="search-input"
+              class="form-control"
+              placeholder="Digite o nome do evento..."
+            />
+            <button id="search-button" class="btn btn-outline-light bg-custom">
+              <i class="bi bi-search"></i> Buscar
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 text-center mt-3 mt-md-0">
+          <div class="btn-group" role="group">
+            <input
+              type="radio"
+              class="btn-check"
+              name="filter"
+              id="filter-all"
+              value="all"
+              checked
+            />
+            <label class="btn btn-outline-primary bg-custom" for="filter-all">
+              <i class="bi bi-list"></i> Todos
+            </label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="filter"
+              id="filter-paid"
+              value="paid"
+            />
+            <label class="btn btn-outline-success bg-custom" for="filter-paid">
+              <i class="bi bi-currency-dollar"></i> Pago
+            </label>
+
+            <input
+              type="radio"
+              class="btn-check"
+              name="filter"
+              id="filter-free"
+              value="free"
+            />
+            <label class="btn btn-outline-info bg-custom" for="filter-free">
+              <i class="bi bi-gift"></i> Gratuito
+            </label>
+          </div>
+        </div>
+      </div>
+      <div id="event-results" class="mt-5"></div>
+    </div>
+
+    <!--Newsletter-->
+    <div class="newsletter-container container my-5">
+      <h3 class="text-center mb-4">Receba as Novidades</h3>
+      <p class="text-center text-muted">
+        Inscreva-se para receber as últimas atualizações sobre eventos!
+      </p>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form id="newsletter-form" class="input-group shadow-sm">
+            <input
+              type="email"
+              id="newsletter-email"
+              class="form-control"
+              placeholder="Digite seu e-mail..."
+              required
+            />
+            <button class="btn btn-primary bg-custom" type="submit">
+              <i class="bi bi-envelope-fill"></i> Inscrever-se
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="newsletter-message" class="text-center mt-3"></div>
+    </div>
+
+    <!--Footer-->
+    <footer class="footer text-light py-4">
+      <div class="container">
+        <div class="row">
+          <!-- Sobre -->
+          <div class="col-md-4 mb-3">
+            <h5>Sobre Nós</h5>
+            <p class="text-muted">
+              Nosso objetivo é conectar pessoas aos melhores eventos da cidade.
+            </p>
+          </div>
+          <!-- Links Rápidos -->
+          <div class="col-md-4 mb-3">
+            <h5>Links Rápidos</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#sobre" class="text-decoration-none text-light"
+                  >Sobre</a
+                >
+              </li>
+              <li>
+                <a href="#contato" class="text-decoration-none text-light"
+                  >Contato</a
+                >
+              </li>
+              <li>
+                <a href="#eventos" class="text-decoration-none text-light"
+                  >Eventos</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Redes Sociais -->
+          <div class="col-md-4 mb-3">
+            <h5>Redes Sociais</h5>
+            <a href="#" class="text-light me-3">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="text-light me-3">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="text-light me-3">
+              <i class="bi bi-twitter"></i>
+            </a>
+          </div>
+        </div>
+        <hr class="border-light" />
+        <div class="text-center">
+          <p class="mb-0">
+            © 2024 Lumus Eventos. Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="javascript.js"></script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+:root {
+  --bs-primary-rgb: 10, 35, 61;
+}
+
+.bg-custom {
+  background-color: #0A223C;
+}
+
+/* Estilo para a logo */
+.logo {
+    width: 80px;
+    /* Ajuste a largura da logo */
+    height: 80px;
+    /* Ajuste a altura da logo */
+}
+
+/* nav, .bg-custom {
+    background-color: #0A223C;
+} */
+#proximosEventos h2 {
+    color: black;
+  }
+  .newsletter-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #newsletter-form input {
+    border-radius: 5px 0 0 5px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  #newsletter-form button {
+    border-radius: 0 5px 5px 0;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .carousel-inner img {
+    /* max-height: 500px; */
+    object-fit: cover;
+  }
+  .footer {
+    background-color: #0A223C;
+    color: #adb5bd;
+  }
+  
+  .footer h5 {
+    color: #ffffff;
+  }
+  
+  .footer a:hover {
+    color: #0d6efd; /* Cor de destaque */
+    text-decoration: underline;
+  }
+  
+  .footer hr {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  
+  
+    
+    
