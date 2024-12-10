@@ -19,12 +19,12 @@ async function sendData(data) {
         body: JSON.stringify(formData)
       });
       console.log(await response.json());
-      alert("Cadastrado com sucesso!!")
+      alert("Cadastrado com sucesso!!");
+      window.location.href = "../index.html";
     } catch (e) {
       console.error(e);
       alert("Dados incorretos!")
     }
-    window.location.href = "../index.html";
   }
   
   const send = document.querySelector("#btnCadastrarEvento");
