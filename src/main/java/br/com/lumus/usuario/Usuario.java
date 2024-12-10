@@ -32,6 +32,6 @@ public class Usuario {
     private Local endereco;
 
     @ManyToMany
-    private List<Evento> incricoes;
+    private List<Evento> inscricoes;
     
 }

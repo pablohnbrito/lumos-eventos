@@ -4,15 +4,16 @@ async function getLogin(data) {
     }
   
     try {
-      const response = await fetch("/usuario", {
+      const response = fetch("/usuario", {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
         }
       });
-      const data = await response.json();
+      const data = response.json();
+      users = data.content
       console.log(data);
-      if (Array.isArray(data) && data.some(user => user.email === formData) ) {
+      if (Array.isArray(users) && users.some(user => user.email === formData.email) ) {
         alert("Logado com sucesso!!");
         window.location.href = "../index.html";
       } 
