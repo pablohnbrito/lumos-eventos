@@ -1,7 +1,7 @@
 // Quantidade de imagens que podem ser adicionadas ao carousel próximos
 // eventos, o nome da imagem tem que ser no padrão imagem1.PNG
 // Apenas o número pode mudar.
-const qtdImagens = 4;
+const qtdImagens = 6;
 const qtdEventos = 9;
 
 async function getEvento() {
